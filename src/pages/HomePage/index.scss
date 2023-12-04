@@ -1,0 +1,281 @@
+#MPFurniture {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+
+  .MPF-content {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-wrap: balance;
+    h2 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .MPF-imgs-cards {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+  }
+  .MPF-imgs-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 33%;
+    gap: 10px;
+    h2 {
+      font-size: 18px;
+      transition: 0.2s linear;
+      &:hover {
+        color: #faba00;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+//
+#imgTrainBox{
+display: flex;
+overflow: hidden;
+
+}
+
+
+.imgTrain {
+  position: relative;
+  display: flex;
+
+  &:hover{
+    .traindropup{
+      height: 80% !important;
+    opacity: 1;
+    }
+    
+  }
+  
+
+  .traindropup {
+    position: absolute;
+    left: 0px;
+    bottom: -20%;
+    background: #faba00;
+    width: 100%;
+    padding: 36px;
+    transition: all 400ms ease;
+    height: 0;
+    // &:hover{
+    //   height: 100% !important;
+    // }
+  }
+}
+
+//
+
+// FEATURES SECTION
+.Features {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  .featuresTitle {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-wrap: balance;
+    gap: 10px;
+    h2 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .featuresGridbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+    p {
+      font-size: 12px;
+      text-wrap: balance;
+    }
+    .featuresBox {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 40px;
+      .featuresBoxTitle {
+        display: flex;
+        gap: 20px;
+        transition: 0.3s linear;
+        &:hover {
+          color: #faba00;
+        }
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+// FEATURES SECITON END
+
+// SOFA SECTION
+
+.Sofa {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    color: white;
+  background-repeat: no-repeat;
+  background-image: url(https://preview.colorlib.com/theme/woodrox/img/notify-bg.jpg.webp);
+    .SofaTitle{
+      width: 40%;
+      text-align: center;
+      text-wrap: balance;
+      margin: 10px;
+      line-height: 30px;
+      h2{
+        font-size: 30px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  button{
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #faba00;
+    border-radius: 4px;
+    border: 1px solid #faba00;
+    transition: .3s linear;
+    &:hover{
+        color: #faba00;
+        background-color: transparent;
+    }
+}
+}
+
+
+// SOFA SECTION END 
+
+// BLOG SECTION
+
+.Blog {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+
+  .blogTitle {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    text-wrap: balance;
+    h2 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .blogCardWrapper{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+  }
+  .blogCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 33%;
+    gap: 30px;
+    h2 {
+      font-size: 18px;
+      transition: 0.2s linear;
+      &:hover {
+        color: #faba00;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .tlbtns{
+    display: flex;
+    gap: 5px;
+    .travel{
+      padding: 5px 30px;
+      background-color: #faba00;
+    }
+    .lifestyle{
+      padding: 5px 30px;
+      transition: .3s linear;
+      &:hover{
+        background-color: #faba00;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen  and (max-width:940px){
+  .MPF-imgs-cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgTrain:nth-of-type(3){
+    display: none !important;
+  }
+
+  .featuresGridbox{
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .blogCardWrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width:700px) {
+  .featuresGridbox{
+    grid-template-columns: 1fr  !important;
+  }
+  .travel{
+    padding: 3px 20px !important;
+  }
+  .lifestyle{
+    padding: 3px 20px !important;
+  }
+  .imgTrain{
+    flex-direction: column !important;
+  }
+}

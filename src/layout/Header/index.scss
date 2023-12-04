@@ -1,0 +1,188 @@
+#Header{
+    width: 100%;
+    min-height: 10vh;
+    position: absolute;
+    .uppernav{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 3vh;
+        color: white;
+        font-size: 12px;
+        background-color: rgba($color: grey, $alpha: 0.3);
+        padding: 5px 20px;
+        .uppernavcontent{
+            display: flex;
+            gap: 20px;
+        }
+        .uppernavsocials{
+            display: flex;
+            gap: 20px;
+        }
+    }
+   .undernav{
+    max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 5vh;
+        color: white;
+        padding: 10px 0;
+        .undernavbtns >ul{
+            display: flex;
+            gap: 40px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+   } 
+}
+
+
+#heroSection{
+    width: 100%;
+    background-image: url(./../../assets/Images/home-banner.jpg.webp);
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    padding: 150px 0;
+    .hero{
+        max-width: 1200px;
+        margin: auto;
+        color: white;
+    display: flex;
+    justify-content: space-between;
+    
+        .heroContent{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            width: 50%;
+            gap:20px;
+            button{
+                margin-top: 20px;
+                border: none;
+                outline: none;
+                width: 150px;
+                height: 50px;
+                color: white;
+                background-color: #faba00;
+                border-radius: 4px;
+                border: 1px solid #faba00;
+                transition: .3s linear;
+                &:hover{
+                    color: #faba00;
+                    background-color: transparent;
+                }
+            }
+        }
+        .heroGrid{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        background-color: rgba($color: grey, $alpha: 0.3);
+        padding: 60px;
+            border-radius: 5px;
+            i{
+                font-size: 30px;
+                padding: 40px;
+                transition: .3s linear;
+                &:hover{
+                    background-color: #faba00;
+                }
+            }
+        }
+    }
+      
+}
+
+
+
+
+// dropdown
+.pagebtn{
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        .dropdown{
+            opacity: 1 !important;
+            
+        }
+    }
+    .dropdown{
+        display: flex;
+        width: 200px;
+        min-height: 100px;
+        background-color: white;
+        position: absolute;
+        opacity: 0;
+        transition: .3s linear;
+        margin: 10px 0;
+        color: black;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            li{
+                padding: 20px 50px;
+                font-size: 12px;
+                transition: .2s linear;
+                &:hover{
+                    color: white;
+                    background-color: #faba00;
+                }
+            }
+        }
+    }
+   
+}
+
+.active{
+    color: white;
+}
+
+.pending{
+    color: white;
+}
+
+.responsiveMenu{
+    display: none;
+    font-size: 24px;
+    padding: 20px;
+}
+
+@media screen  and (max-width:940px){
+    .undernavbtns{
+        display: none;
+    }
+    .responsiveMenu{
+        display: inline;
+    }
+    .uppernav{
+        display: none !important;
+    }
+
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    #heroSection{
+        height: 100vh;
+        background-position: center;
+        .heroGrid{
+            grid-template-columns: 1fr 1fr 1fr !important;
+        }
+    }
+
+
+}
+
+@media screen  and (max-width:750px){
+    .heroGrid{
+        display: none !important;
+    }
+}
